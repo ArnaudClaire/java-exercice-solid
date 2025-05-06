@@ -1,17 +1,16 @@
 package fr.visiplus.exercice.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import fr.visiplus.exercice.User;
+import fr.visiplus.exercice.UserComparator;
 
 public class ServiceImplementation implements IService {
 
-	public String getUsername() throws Exception {
-		throw new Exception();
+	@Override
+	public List<User> sortUsersByUsername(List<User> users) {
+		Collections.sort(users, new UserComparator());
+		return users;
 	}
-
-	public List<User> sortUsersByUsername(List<User> users) throws Exception {
-		return UserRepository.sortUsers(users);
-	}
-
 }
