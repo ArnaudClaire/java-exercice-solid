@@ -5,5 +5,5 @@ import java.util.List;
 import fr.visiplus.exercice.User;
 
 public interface IService {
-	List<User> sortUsersByUsername(List<User> users);
+	List<User> getSortedUsers();
 }
